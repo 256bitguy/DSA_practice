@@ -1,0 +1,57 @@
+A stack is a fundamental data structure in computer science and programming. In C++, you can use the std::stack class template from the Standard Template Library (STL) to work with stacks. Here are some common functions and methods related to the std::stack:
+
+push(value): Pushes an element onto the top of the stack.
+
+cpp
+Copy code
+std::stack<int> myStack;
+myStack.push(42);
+pop(): Removes the top element from the stack.
+
+cpp
+Copy code
+myStack.pop();
+top(): Returns a reference to the top element on the stack without removing it.
+
+cpp
+Copy code
+int topElement = myStack.top();
+empty(): Checks if the stack is empty and returns a Boolean value.
+
+cpp
+Copy code
+if (myStack.empty()) {
+    // Stack is empty
+}
+size(): Returns the number of elements in the stack.
+
+cpp
+Copy code
+int stackSize = myStack.size();
+swap(otherStack): Swaps the contents of two stacks.
+
+cpp
+Copy code
+std::stack<int> anotherStack;
+myStack.swap(anotherStack);
+emplace(args...): Constructs an element in-place at the top of the stack.
+
+cpp
+Copy code
+myStack.emplace(10, 'A');
+std::stack Constructors: The std::stack class has various constructors, including those that accept containers, allocators, or other stacks as arguments.
+
+cpp
+Copy code
+std::stack<int> myStack; // Default constructor
+std::stack<int> myStack2(myStack); // Copy constructor
+Iterating Over a Stack: You can't directly iterate over a stack using iterators, but you can pop elements while the stack is not empty.
+
+cpp
+Copy code
+while (!myStack.empty()) {
+    int element = myStack.top();
+    // Do something with element
+    myStack.pop();
+}
+These are some of the most commonly used functions and methods related to the std::stack container in C++. The stack is a last-in, first-out (LIFO) data structure, which means that the last element pushed onto the stack is the first one to be removed.

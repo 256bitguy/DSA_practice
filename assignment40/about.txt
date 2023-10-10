@@ -1,0 +1,39 @@
+A deque (short for "double-ended queue") is a container class in C++ STL that represents a dynamic array with some characteristics of both vectors and queues. It allows efficient insertion and deletion at both ends, making it suitable for various use cases. Here are some commonly used functions and methods provided by std::deque:
+
+1. push_back(value) and push_front(value): These functions add an element to the back or front of the deque, respectively.
+
+2. pop_back() and pop_front(): These functions remove an element from the back or front of the deque, respectively.
+
+3. back() and front(): These functions return references to the last and first elements, respectively.
+
+4. size(): Returns the number of elements in the deque.
+
+5. empty(): Checks if the deque is empty and returns a Boolean value.
+
+6. resize(newSize, value): Resizes the deque to contain newSize elements. If newSize is greater than the current size, new elements are initialized with value.
+
+7. clear(): Removes all elements from the deque.
+
+8. assign(count, value): Assigns count copies of value to the deque.
+
+9. at(index): Accesses the element at the specified index with bounds checking.
+
+10. operator[]: Allows you to access elements using the array subscript operator, without bounds checking.
+
+11. insert(iterator, value): Inserts an element at the specified position.
+
+12. erase(iterator): Removes the element at the specified position.
+
+13. begin() and end(): Return iterators to the first and one past the last element, respectively.
+
+14. rbegin() and rend(): Return reverse iterators to the last and one before the first element, respectively.
+
+15. emplace_back(args...) and emplace_front(args...): Constructs an element in-place at the back or front of the deque, respectively.
+
+16. swap(other): Swaps the contents of two deques.
+
+17. push_back() and pop_back(): Add or remove elements from the back.
+
+18. push_front() and pop_front(): Add or remove elements from the front.
+
+19. insert() and erase(): Insert or erase elements at specified positions.
