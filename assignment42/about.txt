@@ -1,0 +1,75 @@
+n C++, the std::map is a commonly used container from the Standard Template Library (STL) that implements an associative array or dictionary, where each element is a key-value pair. Here are some commonly used functions and methods related to std::map:
+
+insert(pair): Inserts a key-value pair into the map.
+
+cpp
+Copy code
+std::map<int, std::string> myMap;
+myMap.insert(std::make_pair(1, "Alice"));
+emplace(key, value): Inserts a key-value pair into the map using the emplace function.
+
+cpp
+Copy code
+myMap.emplace(2, "Bob");
+at(key): Returns a reference to the value associated with the specified key.
+
+cpp
+Copy code
+std::string name = myMap.at(1);
+operator[]: Accesses the value associated with a key using the subscript operator.
+
+cpp
+Copy code
+std::string name = myMap[1];
+find(key): Searches for a key and returns an iterator pointing to it. If the key is not found, it returns map::end().
+
+cpp
+Copy code
+auto it = myMap.find(1);
+count(key): Returns the number of elements with a given key (0 or 1 for std::map, but can be greater in std::multimap).
+
+cpp
+Copy code
+int numOccurrences = myMap.count(1);
+erase(key): Removes an element with the specified key from the map.
+
+cpp
+Copy code
+myMap.erase(1);
+size(): Returns the number of key-value pairs in the map.
+
+cpp
+Copy code
+int mapSize = myMap.size();
+empty(): Checks if the map is empty and returns a Boolean value.
+
+cpp
+Copy code
+if (myMap.empty()) {
+    // Map is empty
+}
+clear(): Removes all elements from the map.
+
+cpp
+Copy code
+myMap.clear();
+begin() and end(): Return iterators to the first and one past the last element in the map.
+cpp
+Copy code
+auto it = myMap.begin();
+auto endIt = myMap.end();
+rbegin() and rend(): Return reverse iterators to the last and one before the first element in the map.
+cpp
+Copy code
+auto rit = myMap.rbegin();
+auto rendIt = myMap.rend();
+upper_bound(key) and lower_bound(key): Return iterators to the first element with a key greater than or equal to the specified key.
+cpp
+Copy code
+auto upper = myMap.upper_bound(2);
+auto lower = myMap.lower_bound(2);
+These are some of the most commonly used functions and methods related to the std::map container in C++. Maps provide efficient key-value lookups and are widely used for various applications, such as dictionaries, frequency counting, and more.
+
+
+
+
